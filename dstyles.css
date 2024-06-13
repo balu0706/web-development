@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+    border-radius: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+#confirmation {
+    display: none;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 12 Trailers</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+    <script src="app.js"></script>
+    <style>
+        /* Additional CSS for logo size */
+        header img {
+            width: 200px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div ng-controller="MovieController">
+        <header>
+            <img src="1212logo.png" alt="1212 Trailers Logo"> 
+            <h1>1 2 1 2  Trailers</h1>
+            <input type="text" ng-model="search" placeholder="Search...">
+        </header>
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>Welcome to 1212 Trailers! We're dedicated to bringing you the latest and greatest movie trailers.</p>
+            <p>Our mission is to provide you with a convenient way to watch and download trailers for your favorite movies.</p>
+            <center>
+            <p>
+                Be Aware of Fake Websites
+            </p>
+        </center>
+        </div>
+        <div class="movie-container">
+            <div class="movie" ng-repeat="movie in movies | filter:search">
+                <img ng-src="{{movie.poster}}" alt="image">
+                <h2>{{movie.title}}</h2>
+                <button ng-click="watchTrailer(movie)">Watch Trailer</button>
+                <a href="download.html" download="download.html">Download Trailer</a>
+                
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Thank you for visiting us and stay connected for further updates</p>
+        <h3>12 12 trailers</h3>
+    </footer>
+</body>
+</html>

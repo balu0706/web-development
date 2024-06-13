@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Form</title>
+</head>
+<body>
+    <center><form id="downloadForm">
+        <h2>Enter Your Details to Download</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="button" value="Download" onclick="submitForm()">
+    </form>
+    <div id="confirmation" style="display: none;">
+        <h2>Your request has been submitted successfully.</h2>
+        <p>Please check your inbox for further instructions.</p>
+    </div>
+    </center>
+    
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            // Simulate submission
+            document.getElementById('downloadForm').style.display = 'none';
+            document.getElementById('confirmation').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
